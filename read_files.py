@@ -71,3 +71,4 @@ colunas = ['Nome campo', 'CTB', 'UN', 'VAR3', 'VENCIMENTO', 'DEBITO', 'CREDITO',
 df_gerador = pd.DataFrame(dados_gerador_linhas, columns=colunas)
 
 df_gerador.to_excel('Gerador_linhas_layout.xlsx', index=False)
+df_gerador['Linha'].loc[1:].to_csv('layout.csv', index=False, header=False)
